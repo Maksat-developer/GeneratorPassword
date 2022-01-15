@@ -5,9 +5,10 @@ import random
 def Home(request):
     return render (request, 'generator/home.html')
 
+def About(request):
+    return render (request, 'generator/about.html')
 
 def password(request):
-
     Characters = list('qwertyuiopasdfghjklzxcvbnm')
 
     if request.GET.get('uppercase'):
@@ -19,7 +20,7 @@ def password(request):
     if request.GET.get('number'):
         Characters.extend(list('1234567890'))
 
-    lenght = int(request.GET.get('lenght', 10))
+    lenght = int(request.GET.get('lenght', 12))
 
     Thepassword = ''
 
